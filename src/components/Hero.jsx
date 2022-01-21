@@ -14,7 +14,6 @@ const Hero = () => {
             const letra = document.querySelector('.letra');
             setInterval(() => {
                 letra.textContent= letra.textContent == 'o!' ? 'a!' : 'o!';
-                console.log(letra.textContent)
             }, 2000);
         }
 
