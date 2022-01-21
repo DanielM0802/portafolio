@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap');
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+section[id] {
+    scroll-margin-top:  72px;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hover-skill:hover{
+    filter: invert(311%) sepia(54%) saturate(2303%) hue-rotate(54deg) brightness(55%) contrast(195%);
+    transition: filter .3s;
+}
+
+@media (max-width : 768px) {
+    .w-60-max{
+        width: 60%;
+    }
+    .w-80-max{
+        width: 80%;
+        margin: auto;
+    }
+    .descripcion{
+        width: 80%;
+        margin: auto;
+    }
+    .skills > *{
+        margin-bottom: 25px; 
+    }
+    .otras{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr)
+    }
+    .ocultar{
+        display: none;
+    }
+}
+
+@layer components {
+    .skills-container{
+        @apply border-2; 
+        @apply rounded-2xl; 
+        @apply border-emerald-800; 
+        @apply px-8;
+        @apply pb-8;
+        @apply pt-4;
+        @apply flex; 
+        @apply justify-center; 
+        @apply items-center;
+    }
+    .card{
+        @apply w-72;
+        @apply h-[400px]; 
+        @apply rounded; 
+        @apply overflow-hidden; 
+        @apply shadow-lg; 
+        @apply bg-white; 
+        @apply text-black;
+        @apply flex;
+        @apply flex-col;
+        @apply justify-between;
+    }
+    .link-header{
+        @apply text-base;
+        @apply rounded-md; 
+        @apply hover:text-emerald-800; 
+        @apply hover:bg-white;
+    }
+    .icon-social{
+        @apply h-12; 
+        @apply hover:scale-150; 
+        @apply transition; 
+        @apply ease-in; 
+        @apply delay-75; 
+        @apply cursor-pointer;
+    }
+    .snap-item{
+        @apply snap-center; 
+        @apply shrink-0; 
+        @apply first:pl-8; 
+        @apply last:pr-8;
+        @apply mr-10;
+    }
+    .field{
+        @apply border; 
+        @apply border-emerald-800; 
+        @apply rounded-3xl; 
+        @apply p-3;
+        @apply text-lg;
+    }
+}
