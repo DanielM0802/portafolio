@@ -3,15 +3,31 @@ import linkedin from '../img/linkedin.svg'
 import github from '../img/github.svg'
 import perfil from '../img/border-emerald-2.png'
 import wave1 from '../img/wave-1.svg'
+ import { useEffect } from 'react';
 
 
 const Hero = () => {
+
+    useEffect( () => { //Consultando solo una vez
+
+        const cambiarLetra = () => { 
+            const letra = document.querySelector('.letra');
+            setInterval(() => {
+                letra.textContent= letra.textContent == 'o!' ? 'a!' : 'o!';
+                console.log(letra.textContent)
+            }, 2000);
+        }
+
+    
+        cambiarLetra();
+      }, [] );
+
     return (
         <section className="bg-emerald-800 pt-24 mb-5">
             <div className="pt-10 md:flex justify-between w-5/6 mx-auto mb-36 pb-12">
                 
                 <div className="text-5xl  font-bold text-center md:text-left md:text-7xl">    
-                    <h1>Bienvenido <span className="block">a mi página web</span></h1>
+                    <h1>Bienvenid<span className="letra text-emerald-400">o!</span><span className="block">a mi página web</span></h1>
                     <h3 className="text-center font-semibold text-2xl md:max-w-[350px] my-6 md:text-left" >Mi nombre es Daniel y soy desarrollador frontend junior</h3>
                     <div className="social-media max-w-[250px] mx-auto md:ml-0">
                         <div className="grid grid-cols-3 gap">
