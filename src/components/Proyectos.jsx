@@ -1,5 +1,6 @@
 import todo from '../img/proyectos/todo.png'
 import veterinaria from '../img/proyectos/veterinaria.png'
+import shortly from '../img/proyectos/shortly.png'
 import blogr from '../img/proyectos/blogr.png'
 import peluqueria from '../img/proyectos/peluqueria.png'
 import clima from '../img/proyectos/clima.png'
@@ -39,6 +40,16 @@ const Proyectos = () => {
                         info = "Seguimiento de pacientes que contiene las funciones del CRUD e integración con LocalStorage."
                         repo= "https://github.com/DanielM0802/citas-app"
                         sitio="https://citas-app-react01.netlify.app"
+                    />
+                </div>
+                <div className="snap-item">
+                    <Card
+                        source = {shortly}  
+                        titulo =  "URL Shortening API Landing Page"
+                        tec =  "HTML5 - CSS3 - React - TailwindCSS"
+                        info = "Landing page responsive que permite acortar links."
+                        repo = "https://github.com/DanielM0802/URL-shortening-API-landing-page"
+                        sitio = "https://shortly01.netlify.app"
                     />
                 </div>
                 <div className="snap-item">
